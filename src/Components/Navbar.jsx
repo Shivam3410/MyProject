@@ -5,6 +5,7 @@ import search_black from "../assets/search-b.png";
 import search_white from "../assets/search-w.png";
 import darkIcon from "../assets/night.png";
 import lightIcon from "../assets/day.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [Dark, setDark] = useState(false);
@@ -15,15 +16,15 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full h-29 flex items-center justify-between bg-amber-50 dark:bg-black p-[15px]">
+    <nav className="w-full h-29 flex items-center justify-between bg-amber-50 dark:bg-black p-[15px]">
       {/* Change logo based on theme */}
       <img src={Dark ? logo_white : logo_black} alt="Logo" className="w-[150px] cursor-pointer" />
 
       <ul className="flex list-none text-center">
-        <div className="flex place-content-center gap-6 m-[10px_20px] text-lg cursor-pointer  dark:text-white">
-          <li>Home</li>
+        <div className="flex place-content-center gap-6 m-[10px_20px] text-lg  dark:text-white">
+          <li><Link to="/">Home </Link></li>
           <li>Counter</li>
-          <li>Task Manager</li>
+          <li><Link to="/task">Task </Link></li>
           <li>About</li>
         </div>
       </ul>
@@ -40,7 +41,7 @@ const Navbar = () => {
         src={Dark ? lightIcon : darkIcon}
         onClick={changeTheme} className="w-[50px] cursor-pointer mr-[40px]"
       />
-    </div>
+    </nav>
   );
 };
 

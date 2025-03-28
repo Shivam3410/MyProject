@@ -23,9 +23,10 @@ const Navbar = () => {
       <ul className="flex list-none text-center">
         <div className="flex place-content-center gap-6 m-[10px_20px] text-lg  dark:text-white">
           <li><Link to="/">Home </Link></li>
-          <li>Counter</li>
+          <li><Link to="/counter">Counter </Link></li>
           <li><Link to="/task">Task </Link></li>
-          <li>About</li>
+          <li><Link to="/task">About </Link></li>
+          
         </div>
       </ul>
 

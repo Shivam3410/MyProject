@@ -6,17 +6,19 @@ function Counter() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-amber-600 dark:bg-gray-500 p-4">
-      <div className="bg-white shadow-lg rounded-2xl p-6 text-center w-full max-w-sm">
-        <p className="text-lg font-semibold text-gray-700">You have clicked <span className="text-blue-500">{count}</span> times</p>
-        <div className="flex gap-4 mt-4 mx-18">
+      <div className="bg-amber-100 shadow-lg rounded-2xl p-6 text-center w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+        <p className="text-lg font-semibold text-gray-700">
+          You have clicked <span className="text-blue-500">{count}</span> times
+        </p>
+        <div className="flex flex-wrap justify-center gap-4 mt-4">
           <button 
-            className="bg-blue-500 text-white px-3 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
+            className="group px-4 py-2 rounded-lg bg-gradient-to-b from-white to-stone-200/40 shadow-md active:shadow-sm active:scale-95 transition-all duration-200 text-gray-700 font-medium"
             onClick={() => setCount(count + 1)}
           >
             Increase
           </button>
           <button 
-            className="bg-red-500 text-white px-3 py2 rounded-lg hover:bg-red-700 transition duration-300"
+            className="group px-4 py-2 rounded-lg bg-gradient-to-b from-white to-stone-200/40 shadow-md active:shadow-sm active:scale-95 transition-all duration-200 text-gray-700 font-medium"
             onClick={() => setCount(count - 1)}
           >
             Decrease
